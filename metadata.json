@@ -1,0 +1,8 @@
+{
+  "name": "CareerPath",
+  "description": "Student counselling application to discover colleges, courses, AI recommendations, and manage admissions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,57 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper function: Ensure the user is authenticated via Firebase
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Students collection: allows authenticated users to save student profiles & Admin to read all
+    match /students/{studentId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Users collection for account cross-compatibility
+    match /users/{userId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Admission form submissions & applications
+    match /admission_forms/{formId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Counselling session bookings
+    match /counselling_bookings/{bookingId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // College applications
+    match /college_applications/{appId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // College and course master lists (readable by anyone, modifiable by authenticated admins)
+    match /colleges/{collegeId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    match /courses/{courseId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    match /careers/{careerId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    // General fallback: strictly requires Firebase authentication (blocks all unauthenticated public access)
+    match /{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}

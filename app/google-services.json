@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "121678107921",
+    "project_id": "carrerpath-7460e",
+    "storage_bucket": "carrerpath-7460e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121678107921:android:8143aea73fd9e5f42928b0",
+        "android_client_info": {
+          "package_name": "com.aistudio.carrerpath.counseling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121678107921-h00bprgvhhjlv6nfcc7b36hihfoem46p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.carrerpath.counseling",
+            "certificate_hash": "64eabd33232962bbd245b54b36a5f84aff06e802"
+          }
+        },
+        {
+          "client_id": "121678107921-oe6odbimvdf70i98ehq9e1820ls11p0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJaeSc5LwartpzZ-ftltW_rxz5lRMYCtw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121678107921-oe6odbimvdf70i98ehq9e1820ls11p0o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
